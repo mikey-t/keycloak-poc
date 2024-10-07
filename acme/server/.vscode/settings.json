@@ -1,0 +1,9 @@
+{
+    "[csharp]": {
+        "editor.tabSize": 4,
+    },
+    "dotnet.defaultSolution": "dotnet-react-sandbox.sln",
+    "files.associations": {
+        "*.sql": "postgres"
+    }
+}

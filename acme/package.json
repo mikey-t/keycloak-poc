@@ -1,0 +1,24 @@
+{
+  "name": "your-project-name",
+  "author": "Your Name",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pnpmInstall": "pnpm install && cd ./client && pnpm install"
+  },
+  "devDependencies": {
+    "@mikeyt23/node-cli-utils": "^2.0.36",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "swig-cli": "^1.0.3",
+    "swig-cli-modules": "^0.3.3",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  },
+  "volta": {
+    "node": "20.13.1"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "acme-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "volta": {
+    "node": "20.18.0"
+  },
+  "devDependencies": {
+    "@mikeyt23/node-cli-utils": "^2.0.36",
+    "@types/node": "20",
+    "swig-cli": "^1.0.3",
+    "swig-cli-modules": "^0.3.3",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

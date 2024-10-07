@@ -1,0 +1,30 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0.4
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: mssql
+      KC_DB_URL: jdbc:sqlserver://mssql:1433;databaseName=master;trustServerCertificate=true
+      KC_DB_USERNAME: sa
+      KC_DB_PASSWORD: Abc1234!
+      KC_HOSTNAME_STRICT_HTTPS: 'false'
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mssql
+    command:
+      - start-dev
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-CU14-ubuntu-22.04
+    environment:
+      SA_PASSWORD: Abc1234!
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1434:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+volumes:
+  mssql-data:
