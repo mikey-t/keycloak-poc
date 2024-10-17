@@ -9,9 +9,31 @@ Goals:
 
 ## Keycloak Info
 
+## Acme Site Setup
+
+See readme in acme site for info on setup.
+
 ## Running Locally
 
-Runs at http://localhost:8080. Default username/password is admin/admin.
+Reminders for manually running each component in separate terminals, starting from project root:
+- cd keycloak, swig dockerUp
+- cd acme, swig dockerUp, swig server
+- cd acme, swig client
+- cd acme-api, swig run
+- cd api-gateway, swig run
+
+Access reminders:
+- Keycloak runs at http://localhost:8080, login with admin/admin
+- Login to acme site at https://local.acme.mikeyt.net:3000/ with admin@test.com/Abc1234!
+- Postman collection "KeycloakPoc" has various requests, some are direct, other go through api-gateway
+
+Port reminders:
+- keycloak: 8080
+- acme: 3000
+- acme backend: 5001
+- api-gateway: 5202
+- acme-api: 5163
+
 
 ## Setup
 
@@ -33,3 +55,20 @@ Initial steps:
   - ? Type: default
   - Scope tab -> assign roles -> assign role "acme-user"
 
+# acme-api
+
+Port: 5163
+
+Local swagger URL: http://localhost:5163/swagger/index.html
+
+Weather forecast API GET URL: http://localhost:5163/weatherforecast
+
+Weather forecast URL through API gateway (API gateway URL + "/api" prefix): http://localhost:5202/api/weatherforecast
+
+# api-gateway
+
+Port: 5202
+
+URL: http://localhost:5202
+
+Simple status endpoint (returns hello world message): http://localhost:5202/status
