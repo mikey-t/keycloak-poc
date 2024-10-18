@@ -81,6 +81,11 @@ try
     builder.Services.AddScoped<IGoogleLoginWrapper, GoogleLoginWrapper>();
     builder.Services.AddScoped<IRegistrationLogic, RegistrationLogic>();
     builder.Services.AddScoped<IEmailSender, AwsSimpleEmailSender>();
+    builder.Services.AddHttpClient<KeycloakTokenService>(client =>
+    {
+        client.BaseAddress = new Uri("http://localhost:8080/");
+    });
+    builder.Services.AddScoped<IKeycloakTokenService, KeycloakTokenService>();
 
     var loginLogic = LoginLogic.FromDeps(envSettings, dataSource);
     await loginLogic.SeedSuperAdmin();

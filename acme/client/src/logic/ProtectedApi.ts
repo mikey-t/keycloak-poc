@@ -5,4 +5,8 @@ export default class ProtectedApi extends ApiBase {
     async getProtectedTest(): Promise<ApiResponse<string | null>> {
         return await this.get<string>('protected/test')
     }
+
+    async getKeycloakToken(): Promise<ApiResponse<string | null>> {
+        return await this.get<string>('protected/keycloak-token')
+    }
 }
