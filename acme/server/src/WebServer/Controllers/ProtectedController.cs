@@ -28,7 +28,9 @@ public class ProtectedController : ControllerBase
     [HttpGet("keycloak-token")]
     public async Task<string> GetKeycloakToken()
     {
-        var token = await _keycloakTokenService.GetAccessTokenAsync();
+        // var token = await _keycloakTokenService.GetAccessToken();
+        var token = await _keycloakTokenService.GetAccessTokenFromJwtAssertion();
+        // var token = await _keycloakTokenService.GetAccessTokenViaOidc();
         return token;
     }
 }

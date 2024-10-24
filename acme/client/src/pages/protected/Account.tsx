@@ -34,7 +34,7 @@ export default function Account() {
       {/* <p>This page requires authentication.</p>
       <Button variant="contained" onClick={getData}>Test protected endpoint</Button>&nbsp;
       */}
-      <Button variant="contained" onClick={getToken}>Get token from keycloak</Button>&nbsp;
+      <Button variant="contained" onClick={getToken}>Get keycloak token</Button>&nbsp;
       <Button variant="contained" onClick={clear}>Clear</Button>
       <div>{data}</div>
     </>
