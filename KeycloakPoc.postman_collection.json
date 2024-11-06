@@ -7,7 +7,28 @@
 	},
 	"item": [
 		{
-			"name": "API Weather - Direct",
+			"name": "Original acme token (not a keycloak token) - direct to acme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Weather - direct to api",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -20,6 +41,37 @@
 					"port": "5163",
 					"path": [
 						"weatherforecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Keycloak Protected Sample - direct to api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGc29GbW44V2xqZXljUjNZcXF4VWtMZ1ZYRVI5OE5oV196dHo2SWswcTY4In0.eyJleHAiOjE3MzA4MzEwMjUsImlhdCI6MTczMDgzMDcyNSwianRpIjoiZmFjZGUxYjctOTUwMi00Mjc4LWFlNjEtZTA1ODVhMzMzZjEwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9hY21lIiwiYXVkIjpbImFjbWUtYXBpIiwiYWNjb3VudCJdLCJzdWIiOiJkYWQ2MzEzNi0yMDFlLTQ0OTYtYTE1ZC05ODViYjNjOWMwMDMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhY21lLW1vbm9saXRoIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1hY21lIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSBhY21lLWF1ZGllbmNlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTcyLjIxLjAuMSIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1hY21lLW1vbm9saXRoIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4yMS4wLjEiLCJjbGllbnRfaWQiOiJhY21lLW1vbm9saXRoIn0.sxaYfgp-lGi46oaUej8KFrfq7l6HA2uKucYk7V1hGavt3pvnTp5Yt6vK72tX5CNg7r28f8jNd9aSVn6WF60IAxDuQbjFsPGzTxkURFn3L_lPAReqjBykJ6qqYTHfFJ29o8nnn_CFUROay0iNK95ePpKKuTBFwe7SnZdZbSg-ZALSva79ZgXvBjsa45NiWixhGPQSku8Rnzc-38frGO9HzFij0984i8kjmqu9fFrQNhWg3zgHuiihJi254Nz3EC1DmSOpB40yx_3Ftiy4Z2gbjlleZVa8k0aNAs92cMnYaWpBpxHdo3_rVDnRcX0Vem1m-nkPOscq_73N6m8Oik86UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5163/api/sample/protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5163",
+					"path": [
+						"api",
+						"sample",
+						"protected"
 					]
 				}
 			},
@@ -59,6 +111,69 @@
 					"path": [
 						"api",
 						"weatherforecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-info - direct to acme",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connect/user-info",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connect",
+						"user-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "scratch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connect/temp",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connect",
+						"temp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "openid-configuration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connect/openid-configuration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connect",
+						"openid-configuration"
 					]
 				}
 			},
