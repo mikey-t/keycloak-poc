@@ -1,0 +1,42 @@
+{
+  "[typescript]": {
+    "editor.autoIndent": "full",
+    "editor.trimAutoWhitespace": false,
+    "typescript.preferences.quoteStyle": "single",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.autoIndent": "full",
+    "editor.trimAutoWhitespace": false,
+    "javascript.preferences.quoteStyle": "single",
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "typescript.preferences.importModuleSpecifier": "relative"
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "cSpell.words": [
+    "signin"
+  ],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    ".git",
+    ".vscode",
+    "dist",
+    "src/pages/Blog.tsx",
+    "src/pages/Pricing.tsx",
+    "src/pages/Products.tsx"
+  ]
+}
